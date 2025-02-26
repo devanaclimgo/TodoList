@@ -6,6 +6,10 @@ export default function HomeScreen() {
    <View style={styles.container}>
     <View style={styles.tasksWrapper}>
       <Text style={styles.sectionTitle}>Today's tasks</Text>
+
+      <View style={styles.items}>
+
+      </View>
     </View>
    </View>
   )
@@ -15,5 +19,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+  },
+  tasksWrapper: {
+
+  },
+  sectionTitle: {
+
+  },
+  items:{
+    
   }
 });
