@@ -18,15 +18,17 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#e8eaed',
   },
   tasksWrapper: {
-
+    paddingTop: 80,
+    paddingHorizontal: 20,
   },
   sectionTitle: {
-
+    fontSize: 24,
+    fontWeight: 'bold',
   },
   items:{
-    
+
   }
 });
