@@ -8,7 +8,7 @@ export default function HomeScreen() {
       <Text style={styles.sectionTitle}>Today's tasks</Text>
 
       <View style={styles.items}>
-
+        {/*This is where the tasks will go*/}
       </View>
     </View>
    </View>
