@@ -8,3 +8,5 @@ const task = () => {
     </View>
   )
 }
+
+export default task()
