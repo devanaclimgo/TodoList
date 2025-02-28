@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image, StyleSheet, View, Text } from 'react-native';
+import Task from '../components/Task';
 
 export default function HomeScreen() {
   return (
@@ -8,7 +9,7 @@ export default function HomeScreen() {
       <Text style={styles.sectionTitle}>Today's tasks</Text>
 
       <View style={styles.items}>
-        {/*This is where the tasks will go*/}
+        <Task />
       </View>
     </View>
    </View>
