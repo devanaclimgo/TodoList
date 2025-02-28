@@ -9,4 +9,8 @@ const task = () => {
   )
 }
 
+const styles = StyleSheet.create({
+  
+})
+
 export default task()
