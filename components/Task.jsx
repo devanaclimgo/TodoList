@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text, StyleSheet } from 'react-native'
 
-const task = () => {
+const Task = () => {
   return (
     <View>
-      <Text>This is a task</Text>
+      <Text>{props.text}</Text>
     </View>
   )
 }
@@ -13,4 +13,4 @@ const styles = StyleSheet.create({
   
 })
 
-export default task()
+export default Task()
