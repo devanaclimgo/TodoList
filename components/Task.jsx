@@ -12,6 +12,18 @@ const Task = () => {
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  items: {
+    backgroundColor: '#fff',
+    padding: 15,
+    borderRadius: 10,
+  },
+  itemLeft: {
+
+  },
+  square: {},
+  itemText: {},
+  circular: {},
+});
 
 export default Task();
