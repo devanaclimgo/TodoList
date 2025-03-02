@@ -13,6 +13,12 @@ export default function HomeScreen() {
         <Task text={'Task 2'} />
       </View>
     </View>
+
+    <KeyboardAvoidingView 
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
+      style={styles.writeTaskWrapper}>
+        <TextInput style={styles.input} placeholder={'Write a task'} />
+    </KeyboardAvoidingView>
    </View>
   )
 }
