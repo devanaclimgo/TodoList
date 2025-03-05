@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, StyleSheet, View, Text } from 'react-native';
+import { Image, StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import Task from '../components/Task';
 
 export default function HomeScreen() {
@@ -18,6 +18,10 @@ export default function HomeScreen() {
       behavior={Platform.OS === "ios" ? "padding" : "height"}
       style={styles.writeTaskWrapper}>
         <TextInput style={styles.input} placeholder={'Write a task'} />
+
+        <TouchableOpacity>
+          <View style={styles.addWrapper}></View>
+        </TouchableOpacity>
     </KeyboardAvoidingView>
    </View>
   )
