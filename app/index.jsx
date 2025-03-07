@@ -25,7 +25,7 @@ export default function HomeScreen() {
       style={styles.writeTaskWrapper}>
         <TextInput style={styles.input} placeholder={'Write a task'} value={task} onChangeText={text => setTask(task)} />
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => handleAddTask()}>
           <View style={styles.addWrapper}></View>
         </TouchableOpacity>
     </KeyboardAvoidingView>
