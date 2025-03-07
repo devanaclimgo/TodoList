@@ -17,8 +17,11 @@ export default function HomeScreen() {
       <Text style={styles.sectionTitle}>Today's tasks</Text>
 
       <View style={styles.items}>
-        <Task text={'Task 1'} />
-        <Task text={'Task 2'} />
+        {
+          taskItems.map((item) => {
+            return <Task text={item} />
+          })
+        }
       </View>
     </View>
 
