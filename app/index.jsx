@@ -18,8 +18,8 @@ export default function HomeScreen() {
 
       <View style={styles.items}>
         {
-          taskItems.map((item) => {
-            return <Task text={item} />
+          taskItems.map((item, index) => {
+            return <Task key={index} text={item} />
           })
         }
       </View>
