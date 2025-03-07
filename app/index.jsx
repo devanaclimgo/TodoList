@@ -4,9 +4,11 @@ import Task from '../components/Task';
 
 export default function HomeScreen() {
   const [task, setTask] = useState()
+  const [taskItems, setTaskItems] = useState([])
 
   const handleAddTask = () => {
-    console.log(task)
+    setTaskItems([...taskItems, task])
+    setTask(null)
   }
 
   return (
