@@ -23,7 +23,7 @@ export default function HomeScreen() {
     <KeyboardAvoidingView 
       behavior={Platform.OS === "ios" ? "padding" : "height"}
       style={styles.writeTaskWrapper}>
-        <TextInput style={styles.input} placeholder={'Write a task'} />
+        <TextInput style={styles.input} placeholder={'Write a task'} value={task} onChangeText={text => setTask(task)} />
 
         <TouchableOpacity>
           <View style={styles.addWrapper}></View>
