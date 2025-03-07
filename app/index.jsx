@@ -3,6 +3,12 @@ import { Image, StyleSheet, View, Text, TouchableOpacity, KeyboardAvoidingView, 
 import Task from '../components/Task';
 
 export default function HomeScreen() {
+  const [task, setTask] = useState()
+
+  const handleAddTask = () => {
+    console.log(task)
+  }
+
   return (
    <View style={styles.container}>
     <View style={styles.tasksWrapper}>
