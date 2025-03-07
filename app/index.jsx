@@ -11,6 +11,12 @@ export default function HomeScreen() {
     setTask(null)
   }
 
+  const completeTask = (index) => {
+    let itemsCopy = {...taskItems}
+    itemsCopy.splice(index, 1)
+    setTaskItems(itemsCopy)
+  }
+
   return (
    <View style={styles.container}>
     <View style={styles.tasksWrapper}>
