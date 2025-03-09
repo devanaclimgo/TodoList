@@ -40,7 +40,7 @@ export default function HomeScreen() {
           {taskItems.map((item, index) => {
             return (
               <TouchableOpacity key={index} onPress={() => completeTask(index)}>
-                <Task key={index} text={item} />
+                <Task text={item} />
               </TouchableOpacity>
             );
           })}
