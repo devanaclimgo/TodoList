@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   KeyboardAvoidingView,
   TextInput,
+  ScrollView,
 } from "react-native";
 import Task from "../components/Task";
 
@@ -56,11 +57,12 @@ export default function HomeScreen() {
           style={styles.input}
           placeholder={"Write a task"}
           value={task}
-          onChangeText={(text) => setTask(task)}
+          onChangeText={(text) => setTask(text)}
         />
 
         <TouchableOpacity onPress={() => handleAddTask()}>
           <View style={styles.addWrapper}></View>
+          <Text style={styles.addText}>+</Text>
         </TouchableOpacity>
       </KeyboardAvoidingView>
     </View>
@@ -110,4 +112,5 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderWidth: 1,
   },
+  addText: {},
 });
