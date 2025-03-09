@@ -7,6 +7,7 @@ import {
   KeyboardAvoidingView,
   TextInput,
   Platform,
+  ScrollView,
 } from "react-native";
 import Task from "../components/Task";
 
@@ -27,19 +28,29 @@ export default function HomeScreen() {
 
   return (
     <View style={styles.container}>
-      <View style={styles.tasksWrapper}>
-        <Text style={styles.sectionTitle}>Today's tasks</Text>
+      <ScrollView
+        contentContainerStyle={{
+          flexGrow: 1,
+        }}
+        keyboardShouldPersistTaps="handled"
+      >
+        <View style={styles.tasksWrapper}>
+          <Text style={styles.sectionTitle}>Today's tasks</Text>
 
-        <View style={styles.items}>
-          {taskItems.map((item, index) => {
-            return (
-              <TouchableOpacity key={index} onPress={() => completeTask(index)}>
-                <Task text={item} />
-              </TouchableOpacity>
-            );
-          })}
+          <View style={styles.items}>
+            {taskItems.map((item, index) => {
+              return (
+                <TouchableOpacity
+                  key={index}
+                  onPress={() => completeTask(index)}
+                >
+                  <Task text={item} />
+                </TouchableOpacity>
+              );
+            })}
+          </View>
         </View>
-      </View>
+      </ScrollView>
 
       <KeyboardAvoidingView
         behavior={Platform.OS === "ios" ? "padding" : "height"}
