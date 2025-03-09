@@ -64,7 +64,9 @@ export default function HomeScreen() {
         />
 
         <TouchableOpacity onPress={() => handleAddTask()}>
-          <View style={styles.addWrapper}></View>
+          <View style={styles.addWrapper}>
+            <Text style={styles.addText}>+</Text>
+          </View>
         </TouchableOpacity>
       </KeyboardAvoidingView>
     </View>
@@ -114,4 +116,5 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderWidth: 1,
   },
+  addText: {},
 });
