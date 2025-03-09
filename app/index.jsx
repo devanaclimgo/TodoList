@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import {
-  Image,
   StyleSheet,
   View,
   Text,
   TouchableOpacity,
   KeyboardAvoidingView,
   TextInput,
-  ScrollView,
+  Platform,
 } from "react-native";
 import Task from "../components/Task";
 
@@ -28,12 +27,6 @@ export default function HomeScreen() {
 
   return (
     <View style={styles.container}>
-      <ScrollView
-        contentContainerStyle={{
-          flexGrow: 1
-        }}
-        keyboardShouldPersistTaps='handled'
-      >
       <View style={styles.tasksWrapper}>
         <Text style={styles.sectionTitle}>Today's tasks</Text>
 
@@ -47,7 +40,6 @@ export default function HomeScreen() {
           })}
         </View>
       </View>
-      </ScrollView>
 
       <KeyboardAvoidingView
         behavior={Platform.OS === "ios" ? "padding" : "height"}
@@ -62,7 +54,6 @@ export default function HomeScreen() {
 
         <TouchableOpacity onPress={() => handleAddTask()}>
           <View style={styles.addWrapper}></View>
-          <Text style={styles.addText}>+</Text>
         </TouchableOpacity>
       </KeyboardAvoidingView>
     </View>
@@ -112,5 +103,4 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderWidth: 1,
   },
-  addText: {},
 });
