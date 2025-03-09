@@ -27,6 +27,12 @@ export default function HomeScreen() {
 
   return (
     <View style={styles.container}>
+      <ScrollView
+        contentContainerStyle={{
+          flexGrow: 1
+        }}
+        keyboardShouldPersistTaps='handled'
+      >
       <View style={styles.tasksWrapper}>
         <Text style={styles.sectionTitle}>Today's tasks</Text>
 
@@ -40,6 +46,7 @@ export default function HomeScreen() {
           })}
         </View>
       </View>
+      </ScrollView>
 
       <KeyboardAvoidingView
         behavior={Platform.OS === "ios" ? "padding" : "height"}
