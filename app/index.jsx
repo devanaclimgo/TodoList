@@ -94,8 +94,11 @@ const styles = StyleSheet.create({
     bottom: 60,
     width: "100%",
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "center",
     alignItems: "center",
+    marginLeft: 20, 
+    marginRight: 20,
+    gap: 30,
   },
   input: {
     paddingVertical: 15,
@@ -116,6 +119,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderWidth: 1,
     paddingHorizontal: 20,
+    marginRight: 40,
   },
   addText: {},
 });
