@@ -115,6 +115,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderWidth: 1,
+    paddingHorizontal: 20,
   },
   addText: {},
 });
